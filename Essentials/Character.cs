@@ -17,7 +17,7 @@
         {
             _characterName = name.ToLower();
             _level = level;
-            _hitPoints = (_level * 10);
+            _hitPoints = (_level * 20);
         }
 
         public string GetName() => _characterName;
