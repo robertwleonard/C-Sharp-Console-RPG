@@ -2,10 +2,13 @@
 {
     internal class Character
     {
+        #region properties
         int _hitPoints { get; set; }
         int _level { get; set; }
         string _characterName { get; set; }
+        #endregion
 
+        #region constructors
         public Character(string name)
         {
             _characterName = name.ToLower();
@@ -19,7 +22,9 @@
             _level = level;
             _hitPoints = (_level * 20);
         }
+        #endregion
 
+        #region methods
         public string GetName() => _characterName;
 
         public string CapitalizeName =>
@@ -34,5 +39,6 @@
             _level++;
             _hitPoints += 10;
         }
+        #endregion
     }
 }
