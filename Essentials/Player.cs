@@ -4,6 +4,7 @@
     {
         #region properties
         string _title;
+        bool _hasCustomTitle = false;
         #endregion
 
         #region constructors
@@ -20,6 +21,8 @@
 
         #region methods
         public string GetTitle() => _title;
+
+        public bool HasCustomTitle() => _hasCustomTitle;
 
         string SetTitle(int level)
         {
@@ -50,10 +53,13 @@
             if (!String.IsNullOrEmpty(message))
             {
                 _title = message;
+                _hasCustomTitle = true;
+                Console.WriteLine("Title updated.");
                 return;
             }
 
-            Console.WriteLine("That is not a valid title.");
+            _title = SetTitle(base.GetLevel());
+            Console.WriteLine("Default password set.");
         }
 
         #endregion

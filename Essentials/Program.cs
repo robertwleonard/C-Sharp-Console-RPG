@@ -11,3 +11,6 @@ var playerTwo = new Player("Grafton", 4);
 
 Console.WriteLine($"{playerOne.CapitalizeName} is level {playerOne.GetLevel()}");
 Console.WriteLine($"{playerTwo.CapitalizeName} {playerTwo.GetTitle()}");
+
+playerTwo.SetTitle("the greatest of all time!");
+Console.WriteLine($"{playerTwo.CapitalizeName} is {playerTwo.GetTitle()}");
